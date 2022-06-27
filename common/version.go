@@ -10,11 +10,11 @@ import (
 	"time"
 )
 
-const releaseYear = 2020
-const releaseMonth = 4
-const releaseDay = 23
-const releaseHour = 1
-const releaseMin = 30
+const releaseYear = 2019
+const releaseMonth = 9
+const releaseDay = 7
+const releaseHour = 13
+const releaseMin = 10
 
 // Version holds version information, when bumping this make sure to bump the released at stamp also.
 const Version = "3.6.2"

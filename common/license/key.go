@@ -79,11 +79,7 @@ func (k *LicenseKey) Validate() error {
 	}
 
 	if k.ExpiresAt == nil {
-		expiresAt := k.CreatedAt.AddDate(1, 0, 0)
-		if noLicenseExpiry.After(expiresAt) {
-			expiresAt = noLicenseExpiry
-		}
-		k.ExpiresAt = &expiresAt
+		k.ExpiresAt = &noLicenseExpiry
 	}
 
 	if k.CreatedAt.After(*k.ExpiresAt) {
